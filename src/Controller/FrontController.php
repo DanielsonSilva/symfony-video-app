@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class FrontController extends AbstractController
 {
     /**
-     * @Route("/", name="main_page")
+     * @Route("/index", name="main_page")
      */
     public function index()
     {
@@ -16,7 +16,7 @@ class FrontController extends AbstractController
     }
     
     /**
-     * @Route("/public/video-list", name="video_list")
+     * @Route("/video-list", name="video_list")
      */
     public function videoList()
     {
