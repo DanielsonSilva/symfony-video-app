@@ -1,6 +1,6 @@
-<?php include('includes/_header.php'); ?>
-<?php include('includes/_menu.php'); ?>
+{% extends 'base.html.twig' %}
 
+{% block main %}
 <br>
 <h1>Video title</h1>
 <div align="center" class="embed-responsive embed-responsive-16by9">
@@ -12,7 +12,7 @@
 <div class="row m-2">
     <a id="video_comments"></a>
 
-    <?php for ($i = 1; $i <= 6; $i++) : ?>
+    {% for i in 1..6 %}
 
     <ul class="list-unstyled text-left">
         <li class="media">
@@ -27,7 +27,7 @@
     </ul>
     <hr>
 
-    <?php endfor; ?>
+    {% endfor %}
 
 </div>
 
@@ -43,7 +43,4 @@
         </form>
     </div>
 </div>
-
-
-<?php include('includes/_footer_links.php'); ?>
-<?php include('includes/_footer.php'); ?>
+{% endblock %}
