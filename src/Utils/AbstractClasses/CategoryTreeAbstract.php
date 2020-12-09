@@ -32,6 +32,7 @@ abstract class CategoryTreeAbstract
                 {
                     $category['children'] = $children;
                 }
+                
                 $subcategory[] = $category;
             }
         }
