@@ -7,6 +7,14 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
+/*
+bin/console doctrine:schema:drop -n -q --force --full-database &&
+rm src/Migrations/*.php &&
+bin/console make:migration &&
+bin/console doctrine:migrations:migrate -n -q &&
+bin/console doctrine:fixtues:load -n -q
+*/
+
 /**
  * @ORM\Entity(repositoryClass=CategoryRepository::class)
  * @ORM\Table(name="categories")
@@ -27,6 +35,7 @@ class Category
 
     /**
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="subcategories")
+     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $parent;
 
