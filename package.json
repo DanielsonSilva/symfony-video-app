@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/DanielsonSilva/symfony-video-app#readme",
   "devDependencies": {
-    "@symfony/webpack-encore": "^0.31.0"
+    "@symfony/webpack-encore": "^4.1.1"
   }
 }
